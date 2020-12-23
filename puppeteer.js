@@ -7,8 +7,8 @@ const puppeteer = require("puppeteer");
     const proxyServer = "http://" + proxyHost + ":" + proxyPort
 
     // 隧道验证信息
-    const proxyUser = "2120110900197641441"
-    const proxyPass = "ttSSuifGIRbGRTpY"
+    const proxyUser = "xxx"
+    const proxyPass = "xxx"
     
 
     const browser = await puppeteer.launch({
