@@ -1,15 +1,16 @@
 const puppeteer = require("puppeteer");
 
-// 代理服务器,假设提取到的代理ip是123.123.123.123:1234
-const proxyHost = "123.123.123.123"
-const proxyPort = 1234
-const proxyServer = "http://" + proxyHost + ":" + proxyPort
-
-// 隧道验证信息
-const proxyUser = "xxx"
-const proxyPass = "xxx"
-
 (async () => {
+    // 代理服务器,假设提取到的代理ip是123.123.123.123:1234
+    const proxyHost = "123.123.123.123"
+    const proxyPort = 1234
+    const proxyServer = "http://" + proxyHost + ":" + proxyPort
+
+    // 隧道验证信息
+    const proxyUser = "2120110900197641441"
+    const proxyPass = "ttSSuifGIRbGRTpY"
+    
+
     const browser = await puppeteer.launch({
         ignoreHTTPSErrors: true,
         headless: false,
@@ -21,7 +22,7 @@ const proxyPass = "xxx"
     await page.authenticate({ username : proxyUser, password : proxyPass})
 
     try {
-        await page.goto("https://www.baidu.com", {timeout: 3000})
+        await page.goto("http://cip.cc")
     }
     catch(err) {
         console.log(err)
